@@ -1,0 +1,10 @@
+%h2 File Practice
+%hr
+= form_for :file, url: write_file_path do |f|
+	= f.label :filename
+	= f.text_field :filename
+	= f.label :content
+	= f.text_area :content
+	= f.submit :create_file
+
+= link_to 'Read File', read_file_path
